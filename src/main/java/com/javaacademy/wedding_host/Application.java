@@ -4,10 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WeddingHostApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(WeddingHostApplication.class, args);
-	}
-
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(com.javaacademy.wedding_host.Application.class, args);
+    }
 }
