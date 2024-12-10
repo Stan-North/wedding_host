@@ -3,11 +3,12 @@ package com.javaacademy.wedding_host.repository;
 import com.javaacademy.wedding_host.database.BookingDataBase;
 import com.javaacademy.wedding_host.entity.BookingEntity;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Component
 @RequiredArgsConstructor
 public class BookingRepository {
     private final BookingDataBase dataBase;
