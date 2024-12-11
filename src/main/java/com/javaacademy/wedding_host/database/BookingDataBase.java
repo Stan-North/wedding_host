@@ -14,9 +14,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
-@Getter
-@Setter
-@RequiredArgsConstructor
 public class BookingDataBase {
     private final Map<Integer, List<BookingEntity>> data = new ConcurrentHashMap<>();
 
