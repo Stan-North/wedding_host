@@ -12,20 +12,21 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin
+@RequestMapping("/booking")
 public class BookingController {
     private final BookingService bookingService;
 
-    @GetMapping("/booking/month/{monthNumber}")
+    @GetMapping("/month/{monthNumber}")
     public List<BookingResponseDto> getByMonth(@PathVariable Integer monthNumber) {
         return bookingService.getBookingsByMonthNumber(monthNumber);
     }
 
-    @GetMapping("booking/month/{monthNumber}/free")
+    @GetMapping("/month/{monthNumber}/free")
     public CountDTO getCountBookingByMonth(@PathVariable Integer monthNumber) {
         return bookingService.getCountByMonth(monthNumber);
     }
 
-    @PostMapping("/booking")
+    @PostMapping()
     public void createBooking(@RequestBody BookingRequestDto bookingRequestDto) {
         bookingService.save(bookingRequestDto);
     }
