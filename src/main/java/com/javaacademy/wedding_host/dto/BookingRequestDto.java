@@ -1,5 +1,6 @@
 package com.javaacademy.wedding_host.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookingRequestDto {
-    private Integer month;
-    private Integer day;
-    private boolean booked;
+    @JsonProperty("month")
+    private Integer monthNumber;
+    @JsonProperty("day")
+    private Integer dayNumber;
+    @JsonProperty("booked")
+    private boolean isBooked;
 }
